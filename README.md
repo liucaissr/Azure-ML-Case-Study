@@ -1,8 +1,16 @@
 # Azure-ML-Case-Study
 
+## Modeling
+
+Machine Learning Result is [here](https://raw.githack.com/liucaissr/Azure-ML-Case-Study/master/Regression_Challenge.html).
+
+## Architect Solution
+
 I designed two architectures for this case study. It should be noted that, system C is storing information which are not updated frequently. And System A and B can be treat as streaming data for real-time processing.
 
 ### Solution 1.0 -  simple Azure cloud solution 
+
+![diagram 1](https://raw.githubusercontent.com/liucaissr/Azure-ML-Case-Study/master/pics/Picture1.png)
 
 - Detail
 	- Train the model in Azure machine learning studio and publish the model as web service
@@ -32,6 +40,8 @@ I designed two architectures for this case study. It should be noted that, syste
 Further reference- https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-machine-learning-integration-tutorial
 
 ### Solution 2.0 – Advanced Azure Cloud solution
+
+![diagram 1](https://raw.githubusercontent.com/liucaissr/Azure-ML-Case-Study/blob/master/pics/Picture2.png)
 
 - Detail
 	- Replace the blob storage with cosmos DB for storing the output blob. It has more advanced performance for querying JSON objects. And JSON is more human readable format compared with other format, which improves the interpretability of the output. 
